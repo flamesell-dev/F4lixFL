@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/send", (req, res) => {
+    console.log("SEND HIT:", req.body);
     lastMessage.id++;
     lastMessage.message = req.body.message || "";
 
