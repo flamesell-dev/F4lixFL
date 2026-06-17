@@ -28,8 +28,11 @@ app.post("/send", (req, res) => {
     });
 });
 
-app.get("/message", (req, res) => {
-    res.json(lastMessage);
+app.get("/test", (req, res) => {
+    console.log("TEST HIT");
+    lastMessage.id++;
+    lastMessage.message = "HELLO FROM FIX";
+    res.send("OK");
 });
 
 app.get("/test", (req, res) => {
