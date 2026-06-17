@@ -25,4 +25,11 @@ app.get("/message", (req, res) => {
     res.json(lastMessage);
 });
 
+app.get("/test", (req, res) => {
+    lastMessage.id++;
+    lastMessage.message = "Hello From F4lixFL";
+
+    res.send("OK");
+});
+
 app.listen(process.env.PORT || 3000);
